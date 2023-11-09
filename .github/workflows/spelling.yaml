@@ -1,6 +1,6 @@
 name: Spellcheck and Grammar Check
 on:
-  push:
+  pull_request:
 
 jobs:
   spellcheck:
