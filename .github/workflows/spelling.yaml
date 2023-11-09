@@ -1,0 +1,25 @@
+name: Spellcheck and Grammar Check
+on:
+  push:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install pip
+        run: |
+          python -m ensurepip
+          python -m pip --version
+
+      - uses: errata-ai/vale-action@reviewdog
+        with:
+          files: all
+          reporter: github-pr-check
