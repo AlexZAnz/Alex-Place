@@ -20,3 +20,5 @@ THIS document explains the release process to deliver changes to bluestone infra
 
 8. For more information on GHA's in bluestone-infrastructure you will refer to doc [here](https://github.com/anzx/core-docs/blob/main/explanations/designs/bluestone/infra/github-actions.md)
 9. So she built this thing to test that thing.
+
+
