@@ -1,6 +1,9 @@
 name: Spellcheck and Grammar Check
 on:
-  push:
+  pull_request:
+    branches:
+      - master
+      - main
 
 jobs:
   spellcheck:
@@ -23,3 +26,5 @@ jobs:
         with:
           files: all
           reporter: github-pr-check
+          fail_on_error: true
+          filter_mode: nofilter
