@@ -1,6 +1,9 @@
 name: Spellcheck and Grammar Check
 on:
   pull_request:
+    branches:
+      - master
+      - main
 
 jobs:
   spellcheck:
